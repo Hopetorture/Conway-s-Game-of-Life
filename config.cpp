@@ -265,3 +265,18 @@ void config::stop()
     crutches=0;
 }
 
+
+void config::clear()
+{
+    QColor wht(255,255,255);
+    QPalette white(wht);
+    crutches=0;
+    for(int i=0;i<25;i++){
+         for(int j=0;j<25;j++)
+         {
+          next[i][j]=0;
+          array[i][j]->state=0;
+          array[i][j]->setPalette(white);
+         }
+    }
+}

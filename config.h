@@ -16,6 +16,7 @@ public:
 public slots:
    void woohoo();
    void stop();
+   void clear();
 };
 
 #endif // CONFIG_H

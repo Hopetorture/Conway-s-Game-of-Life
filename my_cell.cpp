@@ -13,7 +13,7 @@ state=0;
 
 my_cell::~my_cell()
 {
-delete this;
+
 }
 
 void my_cell::mousePressEvent(QMouseEvent *event)

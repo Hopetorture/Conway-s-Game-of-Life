@@ -30,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QPalette qw(clr);
     QColor clr2(9,227,89);
     QPalette qw2(clr2);
+
     for(int i=0;i<25;i++)
     {
         for(int j=0;j<25;j++)
@@ -54,20 +55,21 @@ MainWindow::MainWindow(QWidget *parent) :
             }
         }
     }
+
     this->setWindowTitle("Life");
 
     QWidget* w = new QWidget(this);
 
     QPushButton *btn1=new QPushButton("GO");
     QPushButton *stahp=new QPushButton("STOP");
+     QPushButton *clearz=new QPushButton("CLEAR");
     gamefield->addWidget(btn1,1,26);
    gamefield->addWidget(stahp,2,26);
+   gamefield->addWidget(clearz,3,26);
 
     connect(btn1,SIGNAL(clicked()),current,SLOT(woohoo()));
     connect(stahp,SIGNAL(clicked()),current,SLOT(stop()));
-
-
-
+      connect(clearz,SIGNAL(clicked()),current,SLOT(clear()));
 
 
 
